@@ -578,13 +578,13 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 700;
 }
 
 .hero p {
   margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .hero p span {
@@ -618,6 +618,71 @@ section,
     font-size: 20px;
   }
 }
+
+.passions-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.passions-list li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+  position: relative;
+  padding-left: 40px;
+}
+
+.passions-list li::before {
+  content: "✔"; /* Unicode for checkmark */
+  color: #28a745 ; /* Green color for checkmark */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.down-arrow-btn {
+  display: block;
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem; /* Size of the arrow */
+  color: #fff; /* Color of the arrow */
+  text-align: center;
+  animation: bounce 2s infinite; /* Animation effect */
+  z-index: 4; /* Ensure it's on top */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and scale */
+}
+
+/* Add this for the icon size */
+.down-arrow-btn i {
+  font-size: 3rem; /* Adjust the icon size */
+  color: #fff; /* Same color as the button */
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hover Effect */
+.down-arrow-btn:hover {
+  color: #28a745; /* Change to green on hover */
+  transform: translateX(-50%) scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+
 
 /*--------------------------------------------------------------
 # About Section
